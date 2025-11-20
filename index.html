@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>All in One Demo</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h1>All in One Demo</h1>
+ <p>Welcome to my demo page. Here, you'll see examples of my teaching style.</p>
+
+ <div id="page1">
+ <div class="qa">
+ <div class="question">What's a key difference between the French and English languages in terms of grammar structure?</div>
+ <div class="answer">A key difference is that French often uses more verb conjugations and gendered nouns, whereas English relies more on word order.</div>
+ </div>
+ <button id="next-btn">Next</button>
+ </div>
+
+ <div id="page2" style="display: none;">
+ <div class="qa">
+ <div class="question">How would you prioritize security in a tactical operation?</div>
+ <div class="answer">Prioritizing security in a tactical operation involves thorough risk assessment and situational awareness.</div>
+ </div>
+ <button id="prev-btn">Previous</button>
+ <button id="next-btn-2">Next</button>
+ </div>
+
+ <div id="page3" style="display: none;">
+ <div class="qa">
+ <div class="question">What's a common challenge faced by educators when teaching online, and how would you address it?</div>
+ <div class="answer">One common challenge is keeping students engaged. To address it, I would use interactive tools and regular check-ins.</div>
+ </div>
+ <button id="prev-btn-2">Previous</button>
+ </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
+
+
+CSS (in style.css file):
+
+body {
+ font-family: Arial, sans-serif;
+}
+
+.qa {
+ margin-bottom: 20px;
+}
+
+.question {
+ font-weight: bold;
+ margin-bottom: 10px;
+}
+
+.answer {
+ margin-bottom: 20px;
+}
+
+button {
+ padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ background-color: #4CAF50;
+ color: #fff;
+ cursor: pointer;
+}
+
+button:hover {
+ background-color: #3e8e41;
+}
+
+#page1, #page2, #page3 {
+ padding: 20px;
+ border: 1px solid #ddd;
+ border-radius: 10px;
+ box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+JavaScript (in script.js file):
+
+document.addEventListener('DOMContentLoaded', function() {
+ const nextBtn = document.getElementById('next-btn');
+ const prevBtn = document.getElementById('prev-btn');
+ const nextBtn2 = document.getElementById('next-btn-2');
+ const prevBtn2 = document.getElementById('prev-btn-2');
+ const page1 = document.getElementById('page1');
+ const page2 = document.getElementById('page2');
+ const page3 = document.getElementById('page3');
+
+ nextBtn.addEventListener('click', () => {
+ page1.style.display = 'none';
+ page2.style.display = 'block';
+ });
+
+ prevBtn.addEventListener('click', () => {
+ page1.style.display = 'block';
+ page2.style.display = 'none';
+ });
+
+ nextBtn2.addEventListener('click', () => {
+ page2.style.display = 'none';
+ page3.style.display = 'block';
+ });
+
+ prevBtn2.addEventListener('click', () => {
+ page2.style.display = 'block';
+ page3.style.display = 'none';
+ });
+});
