@@ -1,5 +1,3 @@
-JavaScript (in script.js file):
-
 document.addEventListener('DOMContentLoaded', function() {
  const nextBtn = document.getElementById('next-btn');
  const prevBtn = document.getElementById('prev-btn');
@@ -23,8 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
  page2.style.display = 'none';
  page3.style.display = 'block';
  });
-
-
  prevBtn2.addEventListener('click', () => {
  page2.style.display = 'block';
  page3.style.display = 'none';
